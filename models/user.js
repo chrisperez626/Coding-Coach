@@ -14,10 +14,10 @@ module.exports = function(sequelize, DataTypes){
 		timestamps: false
 	});
 
-	// User.associate = function(models){
-	// 	User.hasMany(models.Post, {
-	// 		onDelete: "Cascade"
-	// 	});
-	// };
+	User.associate = function(models){
+		User.hasMany(models.Post, {
+			onDelete: "Cascade"
+		});
+	};
 	return User;
 }
