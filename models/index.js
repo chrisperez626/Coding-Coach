@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-"use strict";
-
-var fs = require("fs");
-var path = require("path");
-var Sequelize = require("sequelize");
-=======
 'use strict';
 
 var fs = require('fs');
 var path = require('path');
 var Sequelize = require('sequelize');
->>>>>>> db05c9c096516de66835b616d906758f842f78a3
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || 'development';
 var config = require(__dirname + '/../config/config.json')[env];
