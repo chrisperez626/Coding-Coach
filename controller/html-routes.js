@@ -1,9 +1,13 @@
-var express = require('express');
+var db = require('../models');
 
-app.get('/', function(req, res) {
-  res.render('index');
-});
+modules.exports = function(app) {
+  app.get('/', function(req, res) {
+    res.render('index');
+  });
 
-app.get('/contributions', function(req, res) {
-  res.render('contributions');
-});
+  app.get('/contributions', function(req, res) {
+    res.render('contributions');
+  });
+
+  app.get('/contributions/');
+};
