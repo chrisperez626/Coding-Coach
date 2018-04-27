@@ -32,7 +32,7 @@ function runYTQuery(queryYTURL) {
       method: "GET"
     }).done(function(YTData) {
 
-      $(".wells").empty(); //clear div before appending videos
+      $("#youtubePanel").empty(); //clear div before appending videos
 
         //loop to set video id from 4 objects returned from API, dump to div
         for (i = 0; i < maxResults; i++){
@@ -40,7 +40,7 @@ function runYTQuery(queryYTURL) {
           var iframeString = "<iframe id=ytvid" + i + " width=50% height=\"345\" src=\"https://www.youtube.com/embed/"
           + YTData.items[i].id.videoId + "\"><iframe>";  //build iframe element
 
-        $(".panel-body").append(iframeString);  //add iframe elemen to div
+        $("#youtubePanel").append(iframeString);  //add iframe elemen to div
 
     }
   }) 
