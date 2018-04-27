@@ -5,11 +5,8 @@
     "database": "bootcamp_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-<<<<<<< HEAD
     "port": 3306
-=======
-    "port": 3308
->>>>>>> a9bec1a99fcee8645358d5176967bdd08c801221
+
   },
   "test": {
     "username": "root",

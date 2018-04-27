@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/public")));
 
 require('./controller/html-routes.js')(app);
-require('./controller/user-api-routes.js')(app);
+// require('./controller/user-api-routes.js')(app);
 require('./controller/post-api-routes.js')(app);
 
 db.sequelize.sync({ force: true }).then(function() {
