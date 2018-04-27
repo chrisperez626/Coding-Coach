@@ -8,6 +8,11 @@ module.exports = function(app) {
 
   app.get('/contributions', function(req, res) {
     var dataObject = {};
-    res.render('contributions', dataObject);
+    res.render('resources', dataObject);
+  });
+
+  app.get('/contributions/post', function(req, res) {
+    var dataObject = {};
+    res.render('post', dataObject);
   });
 };
