@@ -1,3 +1,6 @@
+console.log(window.location.href);
+var urlArray = window.location.href.split("/");
+
 var apiKey = "AIzaSyAayGDTZosMnbroBx71FzowCC-bB1bPEno";
 var part = "snippet";
 var t = "jsonc"
