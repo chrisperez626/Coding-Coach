@@ -1,4 +1,5 @@
-$(".html-btn").click(function(event){
-	event.preventDefault();
-	console.log("what's happening");
-});
+$(document).ready(function(){
+	$("#sql-btn").on("click", function(){
+		alert("How many people need us");
+	})	
+})
