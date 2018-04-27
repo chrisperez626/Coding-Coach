@@ -6,7 +6,7 @@ module.exports = function(app) {
     res.render('index', dataObject);
   });
 
-  app.get('/resources', function(req, res) {
+  app.get('/resources/:language', function(req, res) {
     var dataObject = {};
     res.render('resources', dataObject);
   });
