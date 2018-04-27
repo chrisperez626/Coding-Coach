@@ -24,7 +24,7 @@
         <h2>User Contributions</h2>
         {{#each posts}}
             <h3>{{this.title}}</h3>
-            <h5>-Shared by {{this.User.user_name}}</h5>
+            <h5 class="text-right">-Shared by {{this.User.user_name}}</h5>
             <p>{{this.content}}</p>
             <hr> 
         {{/each}}
