@@ -3,10 +3,9 @@
     "username": "root",
     "password": "root",
     "database": "bootcamp_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "port": 3308
-
+    "host": "localhost",
+    "port": "3308",
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
