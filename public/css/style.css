@@ -3,8 +3,8 @@ body {
   }
   
   .logo{
-    margin-left: 25%;
-    width: 50%;
+    margin-left: 30%;
+    width: 30%;
   }
   h1,
   h2,
@@ -76,6 +76,7 @@ body {
     font-size: 2rem;
   }
   
+  
   header.masthead .bg-circle {
     z-index: 0;
     position: absolute;
@@ -117,7 +118,7 @@ body {
       padding-bottom: 10rem;
     }
     header.masthead .masthead-content .masthead-heading {
-      font-size: 6rem;
+      font-size: 4rem;
     }
     header.masthead .masthead-content .masthead-subheading {
       font-size: 4rem;
