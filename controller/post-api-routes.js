@@ -21,7 +21,9 @@ module.exports = function(app) {
   });
 
   app.post('/api/contributions', function(req, res) {
-    db.User.create(req.body.user_name).then(function(user) {
+    db.User.create({
+      user_name: req.body.name
+    }).then(function(user) {
       var userId = user.dataValues.id;
       db.Post.create({
         title: req.body.title,

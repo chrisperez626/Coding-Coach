@@ -4,7 +4,11 @@
     "password": "root",
     "database": "bootcamp_db",
     "host": "localhost",
+<<<<<<< HEAD
     "port": "3308",
+=======
+    "port": 3306,
+>>>>>>> 604201dddf06d3abbb659b423297c62732111b7f
     "dialect": "mysql"
   },
   "test": {
