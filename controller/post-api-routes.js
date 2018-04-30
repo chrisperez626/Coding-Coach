@@ -12,13 +12,18 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/api/contributions', function (req, res) {
-    console.log("inside the get /api/contributions");
+  app.get('/api/contributions/:language', function (req, res) {
+    console.log("inside the get /api/contributions/languages");
     db.Post.findAll({
-        include: [db.User]
+        where:{
+          language:req.params.language
+        },
+        include: [db.User],
+        order: [ [ 'createdAt', 'DESC' ]]
     }).then(function (result) {
       var postsObj = { posts: result };
-      res.json(postsObj);
+      // res.json(postsObj);
+      res.render('contributions', postsObj);
     });
   });
 
