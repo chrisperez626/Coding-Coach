@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('#post').on('submit', function(event) {
+    // function to check if all post fields have a value
     function postCompletion() {
       var completedPost = true;
 
