@@ -14,7 +14,28 @@ body {
     font-family: 'Catamaran';
     font-weight: 800 !important;
   }
-  
+
+
+  .contributions:nth-child(even) {
+    color:#cf353f;
+    background-color: white;
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 10px;
+  }
+
+  .contributions:nth-child(odd){
+    color:black;
+    background-color:#e29b9d;
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 10px;
+  }
+
+  .complete{
+    display:none;
+  }
+
   .btn-xl {
     text-transform: uppercase;
     padding: 1.5rem 3rem;
