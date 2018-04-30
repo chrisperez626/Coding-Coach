@@ -73,6 +73,5 @@ function convertString(str) {
     if(str.includes("&amp;")) {
         str = str.replace("&amp;", "&");
     }
-    console.log(str);
     return str;
 }

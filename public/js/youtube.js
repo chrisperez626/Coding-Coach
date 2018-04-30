@@ -23,7 +23,27 @@ $(document).ready(function() {
     runYTQuery(queryYTURL); //queryURL built, call function to make AJAX call
 });
 
+$("#addTech").keypress(function(event) {
+  if (event.which == 13) {
+      event.preventDefault();
+      q = $("#addTech").val().trim() + " tutorial";
     
+      queryYTURL = "https://www.googleapis.com/youtube/v3/search?part=" + part + "&key=" + apiKey + "&maxResults=" + maxResults + 
+      "&type=" + type + "&q=" + q + "&t=" + t;
+          
+      runYTQuery(queryYTURL);
+    }
+});
+
+$("#searchButton").click(function(event) {
+  event.preventDefault();
+  q = $("#addTech").val().trim() + " tutorial";
+    
+  queryYTURL = "https://www.googleapis.com/youtube/v3/search?part=" + part + "&key=" + apiKey + "&maxResults=" + maxResults + 
+  "&type=" + type + "&q=" + q + "&t=" + t;
+      
+  runYTQuery(queryYTURL);
+});   
 
 // This runYTQuery function expects 1 parameter: the final URL to download data from)
 function runYTQuery(queryYTURL) {
