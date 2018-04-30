@@ -1,71 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<title>Add User</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
 
-<body>
-	<div class="container">
-		<div class="row top-30">
-			<div class="col-md-4 col-sm-4">
-				<a class="btn btn-default" href="/contributions">Go to User Contributions</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-9 offset-md-3">
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Coding Bootcamp Resource Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contributions">User Resources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Add a new user resource...</h5><br><br>
+        
+						<div class="row">
+			<div class="col-md-9 offset-md-3 inputform-fields">
 				<form id="post">
 					<div class="form-group">
 						<label for="user">User Name:</label>
 						<input placeholder="User Name" type="text" class="form-control" id="user">
-						<label for="title">Title:</label>
-						<input placeholder="Post Title" type="text" class="form-control" id="title">
-						<br />
-						<label for="body">Body:</label>
-						<textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
-						<div class="form-group">
+											<div class="form-group">
 							<label for="category">Select Language:</label>
 							<select class="custom-select" id="languages">
-								<option>HTML</option>
-								<option>CSS</option>
-								<option>JavaScript</option>
-								<option>MySQL</option>
-								<option>Node</option>
-								<option>Express</option>
-								<option>React</option>
-								<option>Python</option>
-								<option>Java</option>
-								<option>C#</option>
-								<option>PHP</option>
-								<option>Ruby</option>
+								<option value="html">HTML</option>
+								<option value="css">CSS</option>
+								<option value="javascript">JavaScript</option>
+								<option value="mysql">MySQL</option>
+								<option value="node">Node</option>
+								<option value="express">Express</option>
+								<option value="react">React</option>
+								<option value="python">Python</option>
+								<option value="java">Java</option>
+								<option value="c#">C#</option>
+								<option value="php">PHP</option>
+								<option value="ruby">Ruby</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="category">Post Type:</label>
 							<select class="custom-select" id="post-type">
-								<option>Article</option>
-								<option>Video</option>
-								<option>Code Snippet</option>
-								<option>Other</option>
+								<option value="article">Article</option>
+								<option value="video">Video</option>
+								<option value="code-snippet">Code Snippet</option>
+								<option value="other">Other</option>
 							</select>
 						</div>
+						<label for="title">Title:</label>
+						<input placeholder="Post Title" type="text" class="form-control" id="title">
 						<br />
-						<button type="submit" class="btn btn-success submit">Submit</button>
+						<label for="body">Body:</label>
+						<textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
+	
+						<br />
+						<button type="submit" class="express-btn btn btn-primary btn-xl rounded-pill mt-5 btn btn-success submit" data-language = "contribute post" id="contributeButton">Submit</button>
 					</div>
 				</form>
 			</div>
 		</div>
-	</div>
-	{{!--
-	<!-- Custom Script -->
-	<script src="js/user.js" type="text/javascript"></script> --}}
 
-</body>
+        
+          
+              
+          </div>
+        
 
-</html>
+       
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+		<!-- Footer -->
+<footer class="py-5 bg-black">
+    <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; April 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
