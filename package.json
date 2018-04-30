@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/chrisperez626/Project-2#readme",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "hover.css": "^2.3.1",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "npm": "^6.0.0",
