@@ -1,4 +1,4 @@
-$(document).ready(function () {
+// $(document).ready(function () {
     $('#post').on('submit', function () {
         var postObject = {
             name: $('#user').val().trim(),
@@ -11,5 +11,6 @@ $(document).ready(function () {
         $.post('/api/contributions', postObject, function (data) {
             console.log(data);
         });
+        alert("Adding Post...")
     });
-});
+// });
