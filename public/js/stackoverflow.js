@@ -48,8 +48,17 @@ function getStackResults(stackUrl) {
             stackDiv.css("border", "1px solid black");
             stackDiv.css("width", "100%");
             stackDiv.css("background-color", "rgba(255, 255, 255, 0.8)");
+            stackDiv.css("padding", "10px 0");
+            stackDiv.css("text-align", "center");
             var newStr = convertString(data.items[i].title);
             var qLink = $("<a>").text(newStr);
+            qLink.css("color", "#3A0F11");
+            qLink.css("text-decoration", "none");
+            qLink.hover(function() {
+                $(this).css("color", "#C5323C");
+            }, function() {
+                $(this).css("color", "#3A0F11");
+            });
             qLink.attr("href", data.items[i].link);
             stackDiv.append(qLink);
             $(".stackoverflow-div").append(stackDiv);  //add iframe elemen to div

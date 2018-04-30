@@ -6,7 +6,7 @@ var apiKey = "AIzaSyAayGDTZosMnbroBx71FzowCC-bB1bPEno";
 var part = "snippet";
 var t = "jsonc"
 var q = "";
-var maxResults = 2;
+var maxResults = 6;
 var type = "video";
 var queryYTURL = "";
 
