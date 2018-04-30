@@ -7,9 +7,10 @@ var stackUrl =
   '&site=stackoverflow';
 
 $(document).ready(function() {
-  getStackResults(stackUrl); //queryURL built, call function to make AJAX call
+  getStackResults(stackUrl);
 });
 
+// function to run search if user presses enter
 $('#addTech').keypress(function(event) {
   if (event.which == 13) {
     event.preventDefault();
@@ -34,18 +35,13 @@ $('#searchButton').click(function(event) {
   getStackResults(stackUrl);
 });
 
-// This runYTQuery function expects 1 parameter: the final URL to download data from)
 function getStackResults(stackUrl) {
-  // The AJAX function uses the queryYTURL and GETS the JSON data associated with it.
-  // The data then gets stored in the variable called: "YTData"
-
   $.ajax({
     url: stackUrl,
     method: 'GET'
   }).done(function(data) {
-    $('.stackoverflow-div').empty(); //clear div before appending videos
+    $('.stackoverflow-div').empty();
 
-    //loop to set video id from 4 objects returned from API, dump to div
     for (i = 0; i < data.items.length; i++) {
       var stackDiv = $('<div>');
       stackDiv.css('border-left', '2px solid #cf353f');
@@ -70,11 +66,12 @@ function getStackResults(stackUrl) {
       );
       qLink.attr('href', data.items[i].link);
       stackDiv.append(qLink);
-      $('.stackoverflow-div').append(stackDiv); //add iframe elemen to div
+      $('.stackoverflow-div').append(stackDiv);
     }
   });
 }
 
+// function to convert HTML entities to symbols
 function convertString(str) {
   if (str.includes('&lt;')) {
     str = str.replace('&lt;', '<');
