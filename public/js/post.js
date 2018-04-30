@@ -1,7 +1,5 @@
 $(document).ready(function() {
   $('#post').on('submit', function(event) {
-    event.preventDefault();
-
     function postCompletion() {
       var completedPost = true;
 
@@ -37,6 +35,7 @@ $(document).ready(function() {
         console.log(data);
       });
     } else {
+      event.preventDefault();
       alert('Please fill out all fields to submit a post!');
     }
   });
