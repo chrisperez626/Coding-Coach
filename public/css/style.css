@@ -178,6 +178,23 @@ body {
    z-index: -1;
    opacity: 0.1
 }
+
+#panelTitle {
+    font-size: 20px;
+    color: white;
+}
+#panelHeading {
+    background-color: #cf353f;
+    color: black;
+}
+
+.stackoverflowresults{
+    width:320px; height:60px; overflow:auto;
+}
+
+table, tr, td{
+    width:320px; height:60px;
+}
  /* .infoSection{
     background-image: url('/img/code.jpeg');
     background-size:100% 100%;
