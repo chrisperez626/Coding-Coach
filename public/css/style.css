@@ -32,9 +32,28 @@ body {
     border-radius: 10px;
   }
 
-  .complete{
-    display:none;
+  .contributions:nth-child(odd) .more{
+    color:black;
   }
+
+  .contributions:nth-child(odd) .less{
+    color:black;
+  }
+
+  .contributions:nth-child(even) .more{
+    color:#cf353f;
+  }
+
+  .contributions:nth-child(even) .less{
+    color:#cf353f;
+  }
+  /* .more{
+    color:#cf353f;
+  } */
+/* 
+  .less{
+    color:#cf353f;
+  } */
 
   .btn-xl {
     text-transform: uppercase;
