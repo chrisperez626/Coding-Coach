@@ -1,29 +1,36 @@
 var db = require('../models');
 
-module.exports = function(app) {
-  app.get('/contributions', function(req, res) {
-    db.Post.findAll({}).then(function(result) {
-      var postsObj = { posts: result };
-      res.render('contributions', postsObj);
-    });
-  });
-
-  app.get('/api/contributions', function(req, res) {
+module.exports = function (app) {
+  app.get('/all/contributions', function (req, res) {
     db.Post.findAll({
-      where: {
-        language: db.Post.language,
-        include: [db.User]
-      }
-    }).then(function(result) {
+      include: [db.User],
+      limit:10,
+      order: [ [ 'createdAt', 'DESC' ]]
+    }).then(function (result) {
       var postsObj = { posts: result };
       res.render('contributions', postsObj);
     });
   });
 
-  app.post('/api/contributions', function(req, res) {
+  app.get('/api/contributions/:language', function (req, res) {
+    console.log("inside the get /api/contributions/languages");
+    db.Post.findAll({
+        where:{
+          language:req.params.language
+        },
+        include: [db.User],
+        order: [ [ 'createdAt', 'DESC' ]]
+    }).then(function (result) {
+      var postsObj = { posts: result };
+      // res.json(postsObj);
+      res.render('contributions', postsObj);
+    });
+  });
+
+  app.post('/api/contributions', function (req, res) {
     db.User.create({
       user_name: req.body.name
-    }).then(function(user) {
+    }).then(function (user) {
       var userId = user.dataValues.id;
       db.Post.create({
         title: req.body.title,
@@ -31,7 +38,7 @@ module.exports = function(app) {
         content: req.body.content,
         content_type: req.body.content_type,
         UserId: userId
-      }).then(function(result) {
+      }).then(function (result) {
         res.json(result);
       });
     });
