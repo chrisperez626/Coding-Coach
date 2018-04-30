@@ -1,92 +1,96 @@
- <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Coding Bootcamp Resource Center</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/all/contributions">User Resources</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="/">Coding Bootcamp Resource Center</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/all/contributions">User Resources</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
-    <header class="masthead text-center text-white">
-      <div class="masthead-content">
-        <div class="container">
-          <h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Add a new user resource...</h5><br><br>
-        
-						<div class="row">
-			<div class="col-md-9 offset-md-3 inputform-fields">
-				<form id="post" action="/all/contributions">
-					<div class="form-group">
-						<label for="user">User Name:</label>
-						<input placeholder="User Name" type="text" class="form-control" id="user">
-											<div class="form-group">
-							<label for="category">Select Language:</label>
-							<select class="custom-select" id="languages">
-								<option value="html">HTML</option>
-								<option value="css">CSS</option>
-								<option value="javascript">JavaScript</option>
-								<option value="mysql">MySQL</option>
-								<option value="node">Node</option>
-								<option value="express">Express</option>
-								<option value="react">React</option>
-								<option value="python">Python</option>
-								<option value="java">Java</option>
-								<option value="c#">C#</option>
-								<option value="php">PHP</option>
-								<option value="ruby">Ruby</option>
-							</select>
-						</div>
+<header class="masthead text-center text-white">
+	<div class="masthead-content">
+		<div class="container">
+			<h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Add a new user resource...</h5>
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="col-md-9 offset-md-3 inputform-fields">
+					<form id="post" action="/all/contributions">
 						<div class="form-group">
-							<label for="category">Post Type:</label>
-							<select class="custom-select" id="post-type">
-								<option value="article">Article</option>
-								<option value="video">Video</option>
-								<option value="code-snippet">Code Snippet</option>
-								<option value="other">Other</option>
-							</select>
+							<label for="user">User Name:</label>
+							<input placeholder="User Name" type="text" class="form-control" id="user">
+							<div class="form-group">
+								<label for="category">Select Language:</label>
+								<select class="custom-select" id="languages">
+									<option value="html">HTML</option>
+									<option value="css">CSS</option>
+									<option value="javascript">JavaScript</option>
+									<option value="mysql">MySQL</option>
+									<option value="node">Node</option>
+									<option value="express">Express</option>
+									<option value="react">React</option>
+									<option value="python">Python</option>
+									<option value="java">Java</option>
+									<option value="c#">C#</option>
+									<option value="php">PHP</option>
+									<option value="ruby">Ruby</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="category">Post Type:</label>
+								<select class="custom-select" id="post-type">
+									<option value="article">Article</option>
+									<option value="video">Video</option>
+									<option value="code-snippet">Code Snippet</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+							<label for="title">Title:</label>
+							<input placeholder="Post Title" type="text" class="form-control" id="title">
+							<br />
+							<label for="body">Body:</label>
+							<textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
+
+							<br />
+							<button type="submit" class="express-btn btn btn-primary btn-xl rounded-pill mt-5 btn btn-success submit" data-language="contribute post"
+							 id="contributeButton">Submit</button>
+
 						</div>
-						<label for="title">Title:</label>
-						<input placeholder="Post Title" type="text" class="form-control" id="title">
-						<br />
-						<label for="body">Body:</label>
-						<textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
-	
-						<br />
-						<button type="submit" class="express-btn btn btn-primary btn-xl rounded-pill mt-5 btn btn-success submit" data-language = "contribute post" id="contributeButton">Submit</button>
-						
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
+
+
+
+
 		</div>
 
-        
-          
-              
-          </div>
-        
 
-       
-      </div>
-      <div class="bg-circle-1 bg-circle"></div>
-      <div class="bg-circle-2 bg-circle"></div>
-      <div class="bg-circle-3 bg-circle"></div>
-      <div class="bg-circle-4 bg-circle"></div>
-    </header>
 
-		<!-- Footer -->
+	</div>
+	<div class="bg-circle-1 bg-circle"></div>
+	<div class="bg-circle-2 bg-circle"></div>
+	<div class="bg-circle-3 bg-circle"></div>
+	<div class="bg-circle-4 bg-circle"></div>
+</header>
+
+<!-- Footer -->
 <footer class="py-5 bg-black">
-    <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; April 2018</p>
-    </div>
-    <!-- /.container -->
+	<div class="container">
+		<p class="m-0 text-center text-white small">Copyright &copy; April 2018</p>
+	</div>
+	<!-- /.container -->
 </footer>

@@ -1,116 +1,131 @@
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Coding Bootcamp Resource Center</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/all/contributions">User Resources</a>
-            </li>
-          </ul>
-        </div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">Coding Bootcamp Resource Center</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/all/contributions">User Resources</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="masthead text-center text-white">
+  <div class="masthead-content">
+    <div class="container">
+      <h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Explore the resources below or search further for help with a specific concept...</h5>
+      <br>
+      <br>
+
+      <form class="create-form"></form>
+      <div class="form-group">
+        <!-- <label for="techAdd">Search for a specific coding sub-topic:</label> -->
+        <input type="text" class="form-control" id="addTech" placeholder="examples: 'css effects', 'javasript arrays', 'SQL joins'">
+        <a href="#" class="express-btn btn btn-primary btn-xl rounded-pill mt-5" data-language="search specific" id="searchButton">Search</a>
+        <br>
+        <br>
       </div>
-    </nav>
 
-    <header class="masthead text-center text-white">
-      <div class="masthead-content">
-        <div class="container">
-          <h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Explore the resources below or search further for help with a specific concept...</h5><br><br>
-        
-          <form class="create-form"></form>
-          <div class="form-group">
-              <!-- <label for="techAdd">Search for a specific coding sub-topic:</label> -->
-              <input type="text" class="form-control" id="addTech" placeholder="examples: 'css effects', 'javasript arrays', 'SQL joins'">
-              <a href="#" class="express-btn btn btn-primary btn-xl rounded-pill mt-5" data-language = "search specific" id="searchButton" >Search</a><br><br>
-          </div>
-              
-          </div>
-          </form>
+    </div>
+    </form>
 
-        </div>
-      </div>
-      <div class="bg-circle-1 bg-circle"></div>
-      <div class="bg-circle-2 bg-circle"></div>
-      <div class="bg-circle-3 bg-circle"></div>
-      <div class="bg-circle-4 bg-circle"></div>
-    </header>
+  </div>
+  </div>
+  <div class="bg-circle-1 bg-circle"></div>
+  <div class="bg-circle-2 bg-circle"></div>
+  <div class="bg-circle-3 bg-circle"></div>
+  <div class="bg-circle-4 bg-circle"></div>
+</header>
 
-    <div class="infoSection">
-    <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
+<div class="infoSection">
+  <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
 
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-    
-          <div class="col-lg-12 order-lg-1">
-            <div class="p-5 stackoverflow">
-              <h2 class="display-4"><img class="logo" img src="/img/stackoverflow.png" alt=""></h2>
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-12 order-lg-1">
+          <div class="p-5 stackoverflow">
+            <h2 class="display-4">
+              <img class="logo" img src="/img/stackoverflow.png" alt="">
+            </h2>
             <div class="p-5 stackoverflow-div" style="overflow: auto;height:300px;">
-              
+
               <!-- stack overflow content goes here -->
             </div>
           </div>
         </div>
       </div>
-    </section>
+  </section>
 
-    {{!-- <section>
-            <div class="container">
-              <div class="row align-items-center">
-          
-                <div class="col-lg-12 order-lg-1">
-                  <div class="p-5 codesandbox-div">
-                        <h2 class="display-4"><img class="logo" src="/img/04.png" alt=""></h2>
-                    <!-- codesandbox content goes here -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> --}}
+  {{!--
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
 
-          <section>
-                <div class="container">
-                  <div class="row align-items-center">
-              
-                    <div class="col-lg-12 order-lg-1">
-                        <h2 class="display-4"><img class="logo" img src="/img/youtube.png" alt=""></h2>
-                      <div class="p-5 youtube-div">
-                            
-                        <!-- youtube content goes here -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <div class="col-lg-12 order-lg-1">
-                  <h2 class="display-4"><img class="logo" src="/img/05.png" alt=""></h2>
-                  <div class="p-5 plunker-div">
-                    >
-                    <!-- plunker content goes here -->
-                        <iframe style="border: 1px solid #999;width: 100%; height: 300px" src="http://embed.plnkr.co/AK732k?t=readme" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+        <div class="col-lg-12 order-lg-1">
+          <div class="p-5 codesandbox-div">
+            <h2 class="display-4">
+              <img class="logo" src="/img/04.png" alt="">
+            </h2>
+            <!-- codesandbox content goes here -->
           </div>
-    <!-- Footer -->
-    <footer class="py-5 bg-black">
-      <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; April 2018</p>
+        </div>
       </div>
-      <!-- /.container -->
-    </footer>
+    </div>
+  </section> --}}
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/youtube.js"></script>
-    <script src="/js/stackoverflow.js"></script>
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-12 order-lg-1">
+          <h2 class="display-4">
+            <img class="logo" img src="/img/youtube.png" alt="">
+          </h2>
+          <div class="p-5 youtube-div">
+
+            <!-- youtube content goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="col-lg-12 order-lg-1">
+    <h2 class="display-4">
+      <img class="logo" src="/img/05.png" alt="">
+    </h2>
+    <div class="p-5 plunker-div">
+      >
+      <!-- plunker content goes here -->
+      <iframe style="border: 1px solid #999;width: 100%; height: 300px" src="http://embed.plnkr.co/AK732k?t=readme" frameborder="0"
+        allowfullscreen="allowfullscreen"></iframe>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="py-5 bg-black">
+  <div class="container">
+    <p class="m-0 text-center text-white small">Copyright &copy; April 2018</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/youtube.js"></script>
+<script src="/js/stackoverflow.js"></script>
