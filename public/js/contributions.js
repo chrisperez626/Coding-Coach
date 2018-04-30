@@ -1,6 +1,6 @@
 $(document).ready(function () {
   (function () {
-    var showChar = 400;
+    var showChar = 300;
     var ellipsestext = "...";
 
     $(".truncate").each(function () {
@@ -13,9 +13,9 @@ $(document).ready(function () {
           c +
           '<span class="moreellipses">' +
           ellipsestext +
-          '&nbsp;&nbsp;<a href="" class="moreless more">read more</a></span></span></div><div class="truncate-text" style="display:none">' +
+          '&nbsp;&nbsp;<strong><a href="" class="moreless more">read more</a></strong></span></span></div><div class="truncate-text" style="display:none">' +
           h +
-          '&nbsp;&nbsp;<a href="" class="moreless less"> less</a></span></div>';
+          '&nbsp;&nbsp;<strong><a href="" class="moreless less"> less</a></strong></span></div>';
 
         $(this).html(html);
       }
