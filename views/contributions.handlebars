@@ -24,7 +24,6 @@
     <div class="container">
       <h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Browse the resorces below or contribute to our user resources</h5>
       <br>
-
       <form class="create-form"></form>
       <div class="form-group">
         <a href="/contributions/post" class="express-btn btn btn-primary btn-xl rounded-pill mt-5" data-language="contribute post"
@@ -40,23 +39,24 @@
   <div class="bg-circle-3 bg-circle"></div>
   <div class="bg-circle-4 bg-circle"></div>
 </header>
+<br>
 <div class="infoSection">
-    <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
-    <section>
-      <div class="container">
+  <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
+  <section>
+    <div class="container">
       {{#each posts}}
       <div class="contributions">
         <br>
         <div class="row">
-          <h3 class="text-left col-sm-9">{{this.title}}</h3> 
+          <h3 class="text-left col-sm-9">{{this.title}}</h3>
           <h5 class="col-sm-3 text-right">{{this.language}}</h5>
-        </div>       
+        </div>
         <span class="text-left">{{this.content}}</span>
         <p class="text-right">-Shared by {{this.User.user_name}}</p>
       </div>
-       {{/each}}
-      </div>
-    </section>
+      {{/each}}
+    </div>
+  </section>
 </div>
 <!-- Footer -->
 <footer class="py-5 bg-black">
