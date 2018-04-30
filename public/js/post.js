@@ -11,5 +11,6 @@ $(document).ready(function () {
         $.post('/api/contributions', postObject, function (data) {
             console.log(data);
         });
+        alert("Adding Post...")
     });
 });
