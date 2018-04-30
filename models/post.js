@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
         language: DataTypes.STRING,
         content_type: DataTypes.STRING,
         content: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         }
     });

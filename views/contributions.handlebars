@@ -46,13 +46,17 @@
     <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
     <section>
       <div class="container">
-      <br>{{#each posts}}
-      <div>
-        <h3 class="text-left">{{this.title}}</h3>
-        <p class="text-left">{{this.content}}</p>
-        <h5 class="text-right">-Shared by {{this.User.user_name}}</h5>
+      {{#each posts}}
+      <div class="contributions">
+        <br>
+        <div class="row">
+          <h3 class="text-left col-sm-9">{{this.title}}</h3> 
+          <h5 class="col-sm-3 text-right">{{this.language}}</h5>
+        </div>       
+        <span class="text-left">{{this.content}}</span>
+        <p class="text-right">-Shared by {{this.User.user_name}}</p>
       </div>
-      <hr> {{/each}}
+       {{/each}}
       </div>
     </section>
 </div>
