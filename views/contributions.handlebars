@@ -1,36 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<title>Add User</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <div class="container blog">
-    <div class="row">
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-default" href="/contributions/post">Contribute a New Post</a>
-      </div>
-    </div>
-  </div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 resource-container">
-        <h2>User Contributions</h2>
-        {{#each posts}}
-            <h3>{{this.title}}</h3>
-            <h5 class="text-right">-Shared by {{this.User.user_name}}</h5>
-            <p>{{this.content}}</p>
-            <hr> 
-        {{/each}}
-      </div>
+    <a class="navbar-brand" href="#">Coding Bootcamp Resource Center</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/all/contributions">User Resources</a>
+        </li>
+      </ul>
     </div>
   </div>
-</body>
+</nav>
 
-</html>
+<header class="masthead text-center text-white">
+  <div class="masthead-content">
+    <div class="container">
+      <h5 class="masthead-heading mb-0 resourcesMast animated lightSpeedIn">Browse the resorces below or contribute to our user resources</h5>
+      <br>
+      <br> {{#each posts}}
+      <h3>{{this.title}}</h3>
+      <h5 class="text-right">-Shared by {{this.User.user_name}}</h5>
+      <p>{{this.content}}</p>
+      <hr> {{/each}}
+      <form class="create-form"></form>
+      <div class="form-group">
+        <a href="/contributions/post" class="express-btn btn btn-primary btn-xl rounded-pill mt-5" data-language="contribute post"
+          id="contributeButton">Contribute a New Post</a>
+        <br>
+        <br>
+      </div>
+
+    </div>
+    </form>
+
+  </div>
+  </div>
+  <div class="bg-circle-1 bg-circle"></div>
+  <div class="bg-circle-2 bg-circle"></div>
+  <div class="bg-circle-3 bg-circle"></div>
+  <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+<!-- Footer -->
+<footer class="py-5 bg-black">
+  <div class="container">
+    <p class="m-0 text-center text-white small">Copyright &copy; April 2018</p>
+  </div>
+  <!-- /.container -->
+</footer>
