@@ -1,4 +1,4 @@
-// $(document).ready(function () {
+$(document).ready(function () {
     $('#post').on('submit', function () {
         var postObject = {
             name: $('#user').val().trim(),
@@ -13,4 +13,4 @@
         });
         alert("Adding Post...")
     });
-// });
+});
