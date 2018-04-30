@@ -1,13 +1,34 @@
 var stackArray = window.location.href.split("/");
 var stackQuery = stackArray[stackArray.length - 1];
 
-var stackUrl = "https://api.stackexchange.com/2.2/questions?page=1&pagesize=5&fromdate=1509494400&todate=1524873600&order=desc&sort=activity&tagged=" + stackQuery + "&site=stackoverflow&filter=!BHMIbze0EPheMk572h0kxuj.q(NQC*"
+var stackUrl =
+ 'https://api.stackexchange.com/2.2/search/advanced?page=1&pagesize=50&fromdate=1509494400&todate=1524873600&order=desc&sort=activity&q=' +
+ stackQuery +
+ '&site=stackoverflow';
 
 $(document).ready(function() {  
     getStackResults(stackUrl); //queryURL built, call function to make AJAX call
 });
 
-    
+$("#addTech").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        stackUrl =
+        'https://api.stackexchange.com/2.2/search/advanced?page=1&pagesize=50&fromdate=1509494400&todate=1524873600&order=desc&sort=activity&q=' +
+        $("#addTech").val().trim() +
+        '&site=stackoverflow';
+        getStackResults(stackUrl);
+    }
+ });
+
+$("#searchButton").click(function(event) {
+    event.preventDefault();
+    stackUrl =
+    'https://api.stackexchange.com/2.2/search/advanced?page=1&pagesize=50&fromdate=1509494400&todate=1524873600&order=desc&sort=activity&q=' +
+    $("#addTech").val().trim() +
+    '&site=stackoverflow';
+    getStackResults(stackUrl);
+});
 
 // This runYTQuery function expects 1 parameter: the final URL to download data from)
 function getStackResults(stackUrl) {
@@ -22,15 +43,36 @@ function getStackResults(stackUrl) {
         $(".stackoverflow-div").empty(); //clear div before appending videos
 
         //loop to set video id from 4 objects returned from API, dump to div
-        for (i = 0; i < 5; i++){
+        for (i = 0; i < data.items.length; i++){
             var stackDiv = $("<div>");
             stackDiv.css("border", "1px solid black");
-            var titlePara = $("<p>").text(data.items[i].title);
-            var qLink = $("<a>").text("Link");
+            stackDiv.css("width", "100%");
+            stackDiv.css("background-color", "rgba(255, 255, 255, 0.8)");
+            var newStr = convertString(data.items[i].title);
+            var qLink = $("<a>").text(newStr);
             qLink.attr("href", data.items[i].link);
-            stackDiv.append(titlePara);
             stackDiv.append(qLink);
             $(".stackoverflow-div").append(stackDiv);  //add iframe elemen to div
         }
   }) 
+}
+
+function convertString(str) {
+    if(str.includes("&lt;")) {
+        str = str.replace("&lt;", "<");
+    }
+    if(str.includes("&gt;")) {
+        str = str.replace("&gt;", ">");
+    }
+    if(str.includes("&quot;")) {
+        str = str.replace("&quot;", "\"");
+    }
+    if(str.includes("&#39;")) {
+        str = str.replace("&#39;", "\'");
+    }
+    if(str.includes("&amp;")) {
+        str = str.replace("&amp;", "&");
+    }
+    console.log(str);
+    return str;
 }
