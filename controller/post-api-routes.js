@@ -4,7 +4,6 @@ module.exports = function(app) {
   app.get('/all/contributions', function(req, res) {
     db.Post.findAll({
       include: [db.User],
-      limit: 10,
       order: [['createdAt', 'DESC']]
     }).then(function(result) {
       var postsObj = { posts: result };
@@ -13,8 +12,6 @@ module.exports = function(app) {
   });
 
   app.get('/api/contributions/:language', function(req, res) {
-    console.log('inside the get /api/contributions/languages');
-    console.log("language: ", req.params.language);
     db.Post.findAll({
       where: {
         language: req.params.language
