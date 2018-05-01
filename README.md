@@ -22,8 +22,8 @@ APIs - Youtube, Stack Overflow
 
 
 Authors:
-Alex Scarlett - Team Lead
-Rob Daraban
-Christian Perez
-Kavitha Veluchamy
+Alex Scarlett - Team Lead,
+Rob Daraban,
+Christian Perez,
+Kavitha Veluchamy,
 Joe Christopher
