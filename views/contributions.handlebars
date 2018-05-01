@@ -40,9 +40,35 @@
   <div class="bg-circle-4 bg-circle"></div>
 </header>
 <br>
-<div class="infoSection">
-  <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
-  <section>
+<section>
+  <div class="infoSection">
+    <img id="backgroundimage" src="/img/code1.jpg" border="0" alt="">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8"></div>
+
+        <form id="post" class="col-sm-4">
+          <div class="form-group">
+            <h4 for="category">Select Language:</h4>
+            <select class="custom-select" id="languages" name="language">
+              <option value="" disabled selected>Select your option</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="mysql">MySQL</option>
+              <option value="node">Node</option>
+              <option value="express">Express</option>
+              <option value="react">React</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="c#">C#</option>
+              <option value="php">PHP</option>
+              <option value="ruby">Ruby</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="container">
       {{#each posts}}
       <div class="contributions">
@@ -51,12 +77,14 @@
           <h3 class="text-left col-sm-9">{{this.title}}</h3>
           <h5 class="col-sm-3 text-right">{{this.language}}</h5>
         </div>
-        <span class="text-left">{{this.content}}</span>
+        <div class="truncate">
+          <span class="text-left">{{this.content}}</span>
+        </div>
         <p class="text-right">-Shared by {{this.User.user_name}}</p>
       </div>
       {{/each}}
     </div>
-  </section>
+</section>
 </div>
 <!-- Footer -->
 <footer class="py-5 bg-black">
