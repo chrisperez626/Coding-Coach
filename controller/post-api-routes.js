@@ -4,7 +4,6 @@ module.exports = function(app) {
   app.get('/all/contributions', function(req, res) {
     db.Post.findAll({
       include: [db.User],
-      limit: 10,
       order: [['createdAt', 'DESC']]
     }).then(function(result) {
       var postsObj = { posts: result };
