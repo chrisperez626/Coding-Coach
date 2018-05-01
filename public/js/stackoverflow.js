@@ -15,12 +15,12 @@ $('#addTech').keypress(function(event) {
   if (event.which == 13) {
     event.preventDefault();
     stackUrl =
-    'https://api.stackexchange.com/2.2/search/advanced?key=ytWgy5BeSx8Sl9JS6s0svA((&page=1&pagesize=50&fromdate=1509494400&todate=1524873600&order=desc&sort=activity&q=' +
-    $('#addTech')
-      .val()
-      .trim() +
-    '&site=stackoverflow';
-  getStackResults(stackUrl);
+      'https://api.stackexchange.com/2.2/search/advanced?key=ytWgy5BeSx8Sl9JS6s0svA((&page=1&pagesize=50&fromdate=1509494400&todate=1524873600&order=desc&sort=activity&q=' +
+      $('#addTech')
+        .val()
+        .trim() +
+      '&site=stackoverflow';
+    getStackResults(stackUrl);
   }
 });
 
@@ -67,6 +67,7 @@ function getStackResults(stackUrl) {
       qLink.attr('href', data.items[i].link);
       stackDiv.append(qLink);
       $('.stackoverflow-div').append(stackDiv);
+      $('#addTech').val('');
     }
   });
 }
