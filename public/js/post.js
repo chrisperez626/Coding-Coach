@@ -35,10 +35,15 @@ $(document).ready(function() {
       $.post('/api/contributions', postObject, function(data) {
         console.log(data);
       });
-      alert('Adding Post...');
+      $('#modal-name').css({"display":"block"});
+      $(".close-modal, .modal-sandbox").click(function(){
+        $(".modal").css({"display":"none"});})
     } else {
       event.preventDefault();
-      alert('Please fill out all fields to submit a post!');
+
+      $('#modal-error').css({"display":"block"});
+      $(".close-modal, .modal-sandbox").click(function(){
+        $(".modal").css({"display":"none"});})
     }
   });
 });
