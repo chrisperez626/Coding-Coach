@@ -1,4 +1,3 @@
-console.log(window.location.href);
 var urlArray = window.location.href.split('/');
 var searchTerm = urlArray[urlArray.length - 1];
 
