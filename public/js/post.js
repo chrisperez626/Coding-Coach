@@ -33,7 +33,7 @@ $(document).ready(function() {
       };
 
       $.post('/api/contributions', postObject, function(data) {
-        console.log(data);
+        window.location.href = "/all/contributions";
       });
       $('#modal-name').css({"display":"block"});
       $(".close-modal, .modal-sandbox").click(function(){

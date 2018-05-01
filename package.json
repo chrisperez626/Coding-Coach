@@ -23,6 +23,7 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "hover.css": "^2.3.1",
+    "jquery.dotdotdot": "^3.2.2",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "npm": "^6.0.0",
