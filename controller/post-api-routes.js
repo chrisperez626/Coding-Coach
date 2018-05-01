@@ -12,8 +12,6 @@ module.exports = function(app) {
   });
 
   app.get('/api/contributions/:language', function(req, res) {
-    console.log('inside the get /api/contributions/languages');
-    console.log("language: ", req.params.language);
     db.Post.findAll({
       where: {
         language: req.params.language
