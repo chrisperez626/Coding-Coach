@@ -1,19 +1,5 @@
 $(document).ready(function() {
 
-  function replaceNewLine(content){
-    console.log("NEW LINE FUNCTION!", content, content.length);
-      for (var i=0; i < content.length; i++){
-        console.log(`CHAR AT ${i}`, content[i]);
-        if(content.charAt[i]==='\n')
-        {
-          console.log("MadeIT HERE!");
-          content.replace('\n','<br/>');
-        }
-      }
-
-      return content;
-  }
-
   $('#post').on('submit', function(event) {
     event.preventDefault();
     // function to check if all post fields have a value
@@ -46,7 +32,6 @@ $(document).ready(function() {
         content_type: $('#post-type').val()
       };
 
-      console.log("BEFORE POST: ", postObject);
 
       $.post('/api/contributions', postObject, function(data) {
         window.location.href = "/all/contributions";

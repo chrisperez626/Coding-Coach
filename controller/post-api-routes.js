@@ -43,9 +43,7 @@ module.exports = function(app) {
 
 
   function replaceNewLine(content){
-    console.log("NEW LINE FUNCTION!", content, content.length);
       for (var i=0; i < content.length; i++){
-        console.log(`CHAR AT ${i}`, content[i]);
         if(content.charAt[i]==='\n')
         {
           content.replace(/(\r\n\t|\n|\r\t)/gm, "<br>");
@@ -62,8 +60,6 @@ module.exports = function(app) {
       var userId = user.dataValues.id;
 
       var newContent = replaceNewLine(req.body.content);
-      console.log("NEW CONTENT: ", newContent);
-
       db.Post.create({
         title: req.body.title,
         language: req.body.language,
