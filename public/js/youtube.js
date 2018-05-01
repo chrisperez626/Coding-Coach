@@ -97,6 +97,7 @@ function runYTQuery(queryYTURL) {
         '"><iframe>';
 
       $('.youtube-div').append(iframeString);
+      $('#addTech').val('');
     }
   });
 }
