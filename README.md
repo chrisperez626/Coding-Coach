@@ -4,20 +4,20 @@ Deployment:
 http://coding-coach.herokuapp.com/
 
 Built With:
-HTML
-CSS
-Bootstrap
-Sass
-Javascript
-JQuery
-Node
-Express
-Handlebars
-Sequelize
-MySQL
-Heroku
-Github
-Plunker
+HTML,
+CSS,
+Bootstrap,
+Sass,
+Javascript,
+JQuery,
+Node,
+Express,
+Handlebars,
+Sequelize,
+MySQL,
+Heroku,
+Github,
+Plunker,
 APIs - Youtube, Stack Overflow
 
 
