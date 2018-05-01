@@ -1,9 +1,9 @@
-$(document).ready(function () {
-  (function () {
+$(document).ready(function() {
+  (function() {
     var showChar = 300;
-    var ellipsestext = "...";
+    var ellipsestext = '...';
 
-    $(".truncate").each(function () {
+    $('.truncate').each(function() {
       var content = $(this).html();
       if (content.length > showChar) {
         var c = content.substr(0, showChar);
@@ -21,12 +21,12 @@ $(document).ready(function () {
       }
     });
 
-    $(".moreless").click(function () {
+    $('.moreless').click(function() {
       var thisEl = $(this);
-      var cT = thisEl.closest(".truncate-text");
-      var tX = ".truncate-text";
+      var cT = thisEl.closest('.truncate-text');
+      var tX = '.truncate-text';
 
-      if (thisEl.hasClass("less")) {
+      if (thisEl.hasClass('less')) {
         cT.prev(tX).toggle();
         cT.slideToggle();
       } else {
@@ -35,15 +35,11 @@ $(document).ready(function () {
       }
       return false;
     });
-    /* end iffe */
   })();
 
-  /* end ready */
-
-  $('select[name="language"]').change(function () {
+  $('select[name="language"]').change(function() {
     var language = $('select[name=language]').val();
     console.log(language);
-    location.href = "/api/contributions/" + language;
+    location.href = '/api/contributions/' + language;
   });
-
 });
