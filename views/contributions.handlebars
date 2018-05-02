@@ -72,19 +72,29 @@
       </div>
     </div>
     <div class="container" style="overflow: auto;height:1097px;">
-      {{#each posts}}
-      <div class="contributions">
-        <br>
-        <div class="row">
-          <h3 class="text-left col-sm-9">{{this.title}}</h3>
-          <h5 class="col-sm-3 text-right">{{this.language}}</h5>
+      {{#if posts}}
+        {{#each posts}}
+        <div class="contributions">
+          <br>
+          <div class="row">
+            <h3 class="text-left col-sm-9">{{this.title}}</h3>
+            <h5 class="col-sm-3 text-right">{{this.language}}</h5>
+          </div>
+          <div class="truncate">
+            <span class="text-left">{{{this.content}}}</span>
+          </div>
+          <p class="text-right">-Shared by {{this.User.user_name}}</p>
         </div>
-        <div class="truncate">
-          <span class="text-left">{{{this.content}}}</span>
+        {{/each}}
+      {{/if}}
+      {{#unless posts}}
+        <div class="contributions">
+          <br>
+          <div class="row">
+            <h2 class="text-center col-sm-12">Sorry, no posts in the topic you are searching for. Would you like to contribute?</h2>
+          </div>
         </div>
-        <p class="text-right">-Shared by {{this.User.user_name}}</p>
-      </div>
-      {{/each}}
+      {{/unless}}  
     </div>
 </section>
 </div>

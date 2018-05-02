@@ -1,17 +1,17 @@
 var db = require('../models');
 
-module.exports = function(app) {
-  app.get('/all/contributions', function(req, res) {
+module.exports = function (app) {
+  app.get('/all/contributions', function (req, res) {
     db.Post.findAll({
       include: [db.User],
       order: [['createdAt', 'DESC']]
-    }).then(function(result) {
+    }).then(function (result) {
       var postsObj = { posts: result };
-      for (var i=0; i< postsObj.posts.length; i++){
+      for (var i = 0; i < postsObj.posts.length; i++) {
         var content = postsObj.posts[i].dataValues.content.replace(/(\r\n\t|\n|\r\t)/gm, "<br/>");;
         postsObj.posts[i].dataValues.content = content;
-        if(postsObj.posts[i].dataValues.language === 'csharp'){
-          var language = postsObj.posts[i].dataValues.language.replace('csharp','C#');
+        if (postsObj.posts[i].dataValues.language === 'csharp') {
+          var language = postsObj.posts[i].dataValues.language.replace('csharp', 'C#');
           postsObj.posts[i].dataValues.language = language;
         }
       }
@@ -19,20 +19,20 @@ module.exports = function(app) {
     });
   });
 
-  app.get('/api/contributions/:language', function(req, res) {
+  app.get('/api/contributions/:language', function (req, res) {
     db.Post.findAll({
       where: {
         language: req.params.language
       },
       include: [db.User],
       order: [['createdAt', 'DESC']]
-    }).then(function(result) {
+    }).then(function (result) {
       var postsObj = { posts: result };
-      for (var i=0; i< postsObj.posts.length; i++){
+      for (var i = 0; i < postsObj.posts.length; i++) {
         var content = postsObj.posts[i].dataValues.content.replace(/(\r\n\t|\n|\r\t)/gm, "<br/>");;
         postsObj.posts[i].dataValues.content = content;
-        if(postsObj.posts[i].dataValues.language === 'csharp'){
-          var language = postsObj.posts[i].dataValues.language.replace('csharp','C#');
+        if (postsObj.posts[i].dataValues.language === 'csharp') {
+          var language = postsObj.posts[i].dataValues.language.replace('csharp', 'C#');
           postsObj.posts[i].dataValues.language = language;
         }
       }
@@ -42,21 +42,20 @@ module.exports = function(app) {
 
 
 
-  function replaceNewLine(content){
-      for (var i=0; i < content.length; i++){
-        if(content.charAt[i]==='\n')
-        {
-          content.replace(/(\r\n\t|\n|\r\t)/gm, "<br>");
-        }
+  function replaceNewLine(content) {
+    for (var i = 0; i < content.length; i++) {
+      if (content.charAt[i] === '\n') {
+        content.replace(/(\r\n\t|\n|\r\t)/gm, "<br>");
       }
+    }
 
-      return content;
+    return content;
   }
 
-  app.post('/api/contributions', function(req, res) {
+  app.post('/api/contributions', function (req, res) {
     db.User.create({
       user_name: req.body.name
-    }).then(function(user) {
+    }).then(function (user) {
       var userId = user.dataValues.id;
 
       var newContent = replaceNewLine(req.body.content);
@@ -66,7 +65,7 @@ module.exports = function(app) {
         content: newContent,
         content_type: req.body.content_type,
         UserId: userId
-      }).then(function(result) {
+      }).then(function (result) {
         res.json(result);
       });
     });
