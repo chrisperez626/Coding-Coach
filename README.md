@@ -1,3 +1,5 @@
+# Coding Coach
+
 Coding Coach - Application provides coding resources for beginner to advanced developers/programmers.  Coding resources included: Stack Overflow, YouTube, Plunker, and user contributions.
 
 Deployment:
