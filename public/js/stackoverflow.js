@@ -78,8 +78,6 @@ function stringTester (condition, str) {
   return regex.test(str);
 } 
 
-console.log(stringTester('good', 'This is avxcvcvxgoodgdgf day'));
-
 // function to convert HTML entities to symbols
 function convertString(str) {
   // console.log("first string:", str);
