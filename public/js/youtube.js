@@ -92,10 +92,9 @@ function runYTQuery(queryYTURL) {
       var iframeString =
         '<iframe id=ytvid' +
         i +
-        ' width=50% height="400" src="https://www.youtube.com/embed/' +
+        ' class="embed-responsive-item" src="https://www.youtube.com/embed/' +
         YTData.items[i].id.videoId +
-        '"><iframe>';
-
+        '" allowfullscreen><iframe>';
       $('.youtube-div').append(iframeString);
       $('#addTech').val('');
     }
