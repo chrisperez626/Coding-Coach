@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-  $('#post').on('submit', function(event) {
+  $('#post').on('submit', function (event) {
     event.preventDefault();
     // function to check if all post fields have a value
     function postCompletion() {
@@ -33,21 +33,23 @@ $(document).ready(function() {
       };
 
 
-      $.post('/api/contributions', postObject, function(data) {
+      $.post('/api/contributions', postObject, function (data) {
         window.location.href = "/all/contributions";
-  
-        $('#modal-name').css({"display":"block"});
-        $(".close-modal, .modal-sandbox").click(function(){
-        $(".modal").css({"display":"none"});})
+
+        $('#modal-name').css({ "display": "block" });
+        $(".close-modal, .modal-sandbox").click(function () {
+          $(".modal").css({ "display": "none" });
+        })
 
       });
-   
+
     } else {
       event.preventDefault();
       //display error modal
-      $('#modal-error').css({"display":"block"});
-      $(".close-modal, .modal-sandbox").click(function(){
-      $(".modal").css({"display":"none"});})
+      $('#modal-error').css({ "display": "block" });
+      $(".close-modal, .modal-sandbox").click(function () {
+        $(".modal").css({ "display": "none" });
+      })
     }
   });
 });

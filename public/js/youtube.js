@@ -10,7 +10,7 @@ var maxResults = 6;
 var type = 'video';
 var queryYTURL = '';
 
-$(document).ready(function() {
+$(document).ready(function () {
   q = searchTerm + ' tutorial';
 
   queryYTURL =
@@ -31,7 +31,7 @@ $(document).ready(function() {
 });
 
 // function to run search if user presses enter
-$('#addTech').keypress(function(event) {
+$('#addTech').keypress(function (event) {
   if (event.which == 13) {
     event.preventDefault();
     q =
@@ -57,7 +57,7 @@ $('#addTech').keypress(function(event) {
   }
 });
 
-$('#searchButton').click(function(event) {
+$('#searchButton').click(function (event) {
   event.preventDefault();
   q =
     $('#addTech')
@@ -85,7 +85,7 @@ function runYTQuery(queryYTURL) {
   $.ajax({
     url: queryYTURL,
     method: 'GET'
-  }).done(function(YTData) {
+  }).done(function (YTData) {
     $('.youtube-div').empty();
 
     for (i = 0; i < maxResults; i++) {
